@@ -29,15 +29,17 @@ const FilmDetails = () => {
     return null;
   }
 
+  const posterUrl = data.backdrop.previewUrl.includes('ott') ? data.poster.previewUrl : data.backdrop.previewUrl
+
   return (
     <main>
       <div className='mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>
         <div className='flex flex-col'>
-          <img src={data.poster.previewUrl} className='logo w-64 mr-5' alt='news 1'/>
+          <div className='flex w-full h-[500px] bg-no-repeat bg-contain' style={{ backgroundImage: `url(${posterUrl})` }} />
           <div>{data.name}</div>
-          <div className='flex space-x-4'>
+          <div className='flex flex-wrap'>
             {data.genres.map((el) => (
-              <div key={el.name} className='border-solid border-2 rounded-md px-3 py-2'>{el.name}</div>
+              <div key={el.name} className='border-solid border-2 mx-2 my-2 border-black rounded-md px-3 py-2'>{el.name}</div>
             ))}
           </div>
           <div>Продолжительность: {formatMovieLength(data.movieLength)}</div>

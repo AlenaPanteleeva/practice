@@ -30,7 +30,7 @@ const NowCinema = () => {
       </header>
       <main>
         <div className='mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>
-          <div className='flex flex-wrap justify-between space-x-4'>
+          <div className='flex flex-wrap justify-between space-x-4 space-y-4'>
             {films.map((film) => (
               <FilmCard key={film.id} {...film} />
             ))}
