@@ -11,7 +11,7 @@ export const FilmCard = (props) => {
   const handleLoad = () => setIsImageLoading(false);
 
   return (
-    <Link to={`/film/${id}`} className={`bg-black relative flex flex-col h-[400px] text-gray-700`}>
+    <Link to={`/film/${id}`} className={`bg-black relative flex flex-col h-[400px] text-gray-900`}>
       <img src={poster.previewUrl} className={`logo w-64 ${isFetching || isImageLoading ? 'opacity-50' : ''}`} onLoad={handleLoad} alt={name}/>
       {(isFetching || isImageLoading) && (
         <div className='absolute flex justify-center items-center w-full h-full'>

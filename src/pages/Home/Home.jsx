@@ -31,23 +31,23 @@ const Home = () => {
     <>
       <header className='bg-white shadow'>
         <div className='mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>
-          <div className='relative flex justify-center items-center w-full h-[500px] bg-no-repeat bg-cover' style={{ backgroundImage: `url(${MainBg})` }}>
-            <h1 className='text-5xl font-bold tracking-tight text-white z-10'>Смотри глубже</h1>
+          <div className='relative flex justify-center items-center w-full h-[400px] bg-no-repeat bg-cover' style={{ backgroundImage: `url(${MainBg})` }}>
+            <h1 className="text-[120px] font-normal tracking-tight text-white z-10 font-montserrat"> Смотри глубже </h1>
             <div className='absolute flex justify-center items-center w-full h-full bg-no-repeat bg-cover' style={{ backgroundImage: `url(${Linear})` }}/>
           </div>
         </div>
       </header>
       <main>
         <div className='mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>
-          <div className='flex flex-col md:flex-row justify-between'>
+          <div className='flex flex-col md:flex-row justify-between font-montserrat text-black font-bold'>
             <div>На связи с вами с 2025 года</div>
             <div>Найдем кино по душе абсолютно для всех</div>
-            <Link to='/about'>Узнать подробнее</Link>
+            <Link to='/about' className='text-black hover:text-blue-700 font-montserrat text-black font-bold underline'>Узнать подробнее</Link>
           </div>
         </div>
 
         <div className='mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>
-          <h1 className='text-3xl mb-8 font-bold tracking-tight text-gray-900'>Смотрят сейчас</h1>
+          <h1 className='text-3xl mb-8 font-bold tracking-tight text-black z-10 font-montserrat'>Смотрят сейчас</h1>
           <Swiper
             spaceBetween={30}
             slidesPerView={4}
@@ -70,10 +70,10 @@ const Home = () => {
                   <img src={film.poster.previewUrl} className='logo w-full' alt={film.name}/>
                   <div className='absolute bg-black bg-opacity-60 left-0 bottom-0 px-3 py-2 text-white'>
                     <div className='flex w-[250px] justify-between space-x-2 text-nowrap overflow-hidden overflow-ellipsis'>
-                      <div className='text-nowrap overflow-hidden overflow-ellipsis'>{film.name}</div>
-                      <div className='px-1 py-1 border-2 rounded-md'>{film.ageRating}+</div>
+                      <div className='text-nowrap overflow-hidden overflow-ellipsis font-montserrat font-bold'>{film.name}</div>
+                      <div className='px-1 py-1 border-2 rounded-md text-xs leading-tight'>{film.ageRating}+</div>
                     </div>
-                    <div className='overflow-hidden overflow-ellipsis text-xs font-normal multiline-overflow'>{film.description}</div>
+                    <div className='overflow-hidden overflow-ellipsis text-xs font-normal multiline-overflow font-montserrat'>{film.description}</div>
                   </div>
                 </Link>
               </SwiperSlide>
