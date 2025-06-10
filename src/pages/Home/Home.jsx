@@ -32,7 +32,10 @@ const Home = () => {
       <header className='bg-white shadow'>
         <div className='mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>
           <div className='relative flex justify-center items-center w-full h-[400px] bg-no-repeat bg-cover' style={{ backgroundImage: `url(${MainBg})` }}>
-            <h1 className="text-[120px] font-normal tracking-tight text-white z-10 font-montserrat"> Смотри глубже </h1>
+            {/* <h1 className="text-[120px] font-normal tracking-tight text-white z-10 font-montserrat"> Смотри глубже </h1> */}
+            <h1 className="text-[40px] md:text-[80px] lg:text-[120px] font-normal tracking-tight text-white z-10 font-montserrat">
+  Смотри глубже
+</h1>
             <div className='absolute flex justify-center items-center w-full h-full bg-no-repeat bg-cover' style={{ backgroundImage: `url(${Linear})` }}/>
           </div>
         </div>
